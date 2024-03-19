@@ -2009,7 +2009,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459040518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2073,7 +2073,7 @@ GameObject:
   - component: {fileID: 1713035327}
   - component: {fileID: 1713035326}
   m_Layer: 0
-  m_Name: ExaminableManager
+  m_Name: Examinable Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2091,7 +2091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24ff49db62c80c42a34a4a03bcb24ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _examineTarget: {fileID: 1459040518}
+  _examineTarget: {fileID: 1459040519}
 --- !u!4 &1713035327
 Transform:
   m_ObjectHideFlags: 0
@@ -2216,7 +2216,7 @@ MonoBehaviour:
   m_XROrigin: {fileID: 817905784}
   m_ExcludeUITouches: 1
   m_ARSessionOrigin: {fileID: 0}
-  m_PlacementPrefab: {fileID: 903758404890903212, guid: f37b0377140e4ad4ab18876765498e79,
+  m_PlacementPrefab: {fileID: 8846301179390088537, guid: 33fef66f055af56468fccb25c1b7b7c4,
     type: 3}
   m_FallbackLayerMask:
     serializedVersion: 2
