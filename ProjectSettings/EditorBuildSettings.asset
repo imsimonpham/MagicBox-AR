@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Object Examiner.unity
-    guid: 760f09a06f8909b489d96b0fa29a1202
+    path: Assets/Scenes/MagicBox.unity
+    guid: a721354397fcf254393f98d0e1baad01
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 9322c90c779b04f43b40b080335e00e6,
       type: 2}
