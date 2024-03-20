@@ -3,6 +3,7 @@ using UnityEngine;
 public class Examinable : MonoBehaviour
 {
     private ExaminableManager _examinableManager;
+    public float examineScaleOffset = 0.8f;
 
     private void Start()
     {
