@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Events;
 
 public class BoxManager : MonoBehaviour
 {
@@ -7,11 +8,13 @@ public class BoxManager : MonoBehaviour
     public string enteredGemOrder = "";
 
     private int _amountOfGems = 3;
-    private int _currentGem = 0;
+    private int _amountOfSelectedGems = 0;
 
     public Animator boxAnimator;
 
     public List<Gem> _gems = new List<Gem>();
+
+    public UnityEvent gameIsWon;
 
 
     public void GemSelect(Gem selectedGem)
@@ -20,12 +23,11 @@ public class BoxManager : MonoBehaviour
         {
             selectedGem.isSelected = true;
             enteredGemOrder += selectedGem.gemColor;
-            _currentGem++;
+            _amountOfSelectedGems++;
             selectedGem.ChangeEmission(true);
-            print("Gem selected, Entered order:" + enteredGemOrder);
         }
         
-        if (_amountOfGems == _currentGem)
+        if (_amountOfSelectedGems == _amountOfGems)
         {
             CheckGemOrder();
         }
@@ -35,18 +37,27 @@ public class BoxManager : MonoBehaviour
     {
         if(enteredGemOrder == correctGemOrder)
         {
-            print("Correct order, Entered order: " + enteredGemOrder);
-            boxAnimator.SetTrigger("Open");
+            CompleteGame();
         } else
         {
-            print("Wrong order, Entered order: " + enteredGemOrder);
-            _currentGem = 0;
-            enteredGemOrder = "";
-            foreach(Gem gem in _gems)
-            {
-                gem.isSelected = false;
-                gem.ChangeEmission(false);
-            }
+            ResetGame();
+        }
+    }
+
+    void CompleteGame()
+    {
+        boxAnimator.SetTrigger("Open");
+        gameIsWon.Invoke();
+    }
+
+    void ResetGame()
+    {
+        _amountOfSelectedGems = 0;
+        enteredGemOrder = "";
+        foreach (Gem gem in _gems)
+        {
+            gem.isSelected = false;
+            gem.ChangeEmission(false);
         }
     }
 }

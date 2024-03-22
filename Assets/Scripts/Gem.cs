@@ -1,11 +1,9 @@
 using UnityEngine;
-using TMPro;
 
 
 public class Gem : MonoBehaviour
 {
     public string gemColor = "";
-    public int id;
     public bool isSelected;
 
     private Material _material;
