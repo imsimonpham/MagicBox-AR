@@ -289,6 +289,8 @@ GameObject:
   - component: {fileID: 1763135745619238950}
   - component: {fileID: 95062896901676733}
   - component: {fileID: 805934710850728099}
+  - component: {fileID: 2859550046930377142}
+  - component: {fileID: 2775329355671484925}
   m_Layer: 0
   m_Name: RedGem
   m_TagString: Untagged
@@ -382,6 +384,126 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.15524858, y: 0.12247048, z: 0.15524857}
   m_Center: {x: 0, y: -0.03344578, z: -0.0000000037252899}
+--- !u!114 &2859550046930377142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3051387493079383393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37993c785de77584f96ce228d886506c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gemColor: Red
+  id: 0
+--- !u!114 &2775329355671484925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3051387493079383393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c670bfa55d621474ea22ff77c1820163, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_Colliders:
+  - {fileID: 805934710850728099}
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1044220312408128928}
+        m_TargetAssemblyTypeName: BoxManager, Assembly-CSharp
+        m_MethodName: GemSelect
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2859550046930377142}
+          m_ObjectArgumentAssemblyTypeName: Gem, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_XROrigin: {fileID: 0}
+  m_ExcludeUITouches: 1
+  m_ARSessionOrigin: {fileID: 0}
+  m_SelectionVisualization: {fileID: 0}
 --- !u!1 &3648801380607477842
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,6 +910,7 @@ GameObject:
   - component: {fileID: 974494223665883456}
   - component: {fileID: 6643727045991436786}
   - component: {fileID: 1963716728534670837}
+  - component: {fileID: 1044220312408128928}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -862,6 +985,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1044220312408128928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5721318264863712201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72d3a79893ef84548b719bd3e3166744, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctGemOrder: BlueRedGreen
+  enteredGemOrder: 
+  boxAnimator: {fileID: 4040272278733786657}
+  _gems:
+  - {fileID: 2859550046930377142}
+  - {fileID: 5411286191759744964}
+  - {fileID: 6588200153507999440}
 --- !u!1 &5838679714654604817
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,6 +1156,8 @@ GameObject:
   - component: {fileID: 3812053487816348101}
   - component: {fileID: 7467106968289080574}
   - component: {fileID: 6878526665997085124}
+  - component: {fileID: 5411286191759744964}
+  - component: {fileID: 8883320220715226015}
   m_Layer: 0
   m_Name: GreenGem
   m_TagString: Untagged
@@ -1107,6 +1251,126 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.15524858, y: 0.12247048, z: 0.15524857}
   m_Center: {x: -0.000000059604645, y: -0.03344578, z: -0.0000000037252899}
+--- !u!114 &5411286191759744964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5999819975964531027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37993c785de77584f96ce228d886506c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gemColor: Green
+  id: 1
+--- !u!114 &8883320220715226015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5999819975964531027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c670bfa55d621474ea22ff77c1820163, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_Colliders:
+  - {fileID: 6878526665997085124}
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1044220312408128928}
+        m_TargetAssemblyTypeName: BoxManager, Assembly-CSharp
+        m_MethodName: GemSelect
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 5411286191759744964}
+          m_ObjectArgumentAssemblyTypeName: Gem, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_XROrigin: {fileID: 0}
+  m_ExcludeUITouches: 1
+  m_ARSessionOrigin: {fileID: 0}
+  m_SelectionVisualization: {fileID: 0}
 --- !u!1 &6728669195718763148
 GameObject:
   m_ObjectHideFlags: 0
@@ -1374,6 +1638,8 @@ GameObject:
   - component: {fileID: 3713200518611972374}
   - component: {fileID: 9121627100639344010}
   - component: {fileID: 6428727909432246113}
+  - component: {fileID: 6588200153507999440}
+  - component: {fileID: 9000058256869565436}
   m_Layer: 0
   m_Name: BlueGem
   m_TagString: Untagged
@@ -1467,6 +1733,126 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.15524858, y: 0.12247048, z: 0.15524857}
   m_Center: {x: -0.000000074505806, y: -0.03344578, z: -0.0000000037252899}
+--- !u!114 &6588200153507999440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7046360410635115962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37993c785de77584f96ce228d886506c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gemColor: Blue
+  id: 2
+--- !u!114 &9000058256869565436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7046360410635115962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c670bfa55d621474ea22ff77c1820163, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_Colliders:
+  - {fileID: 6428727909432246113}
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1044220312408128928}
+        m_TargetAssemblyTypeName: BoxManager, Assembly-CSharp
+        m_MethodName: GemSelect
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 6588200153507999440}
+          m_ObjectArgumentAssemblyTypeName: Gem, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_XROrigin: {fileID: 0}
+  m_ExcludeUITouches: 1
+  m_ARSessionOrigin: {fileID: 0}
+  m_SelectionVisualization: {fileID: 0}
 --- !u!1 &8923131392102980532
 GameObject:
   m_ObjectHideFlags: 0
